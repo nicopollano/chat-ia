@@ -1,0 +1,20 @@
+.popupStyles {
+    background-color: wheat;
+    margin-top: 20px;
+    padding: 8px;
+    padding-top: 0;
+    border-radius: 14px;
+}
+
+.popupStyles > p{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: cursive;
+    border-bottom: 2px solid gray;
+}
+
+.popupStyles > div{
+    overflow-y: auto;
+    height: 100px;
+    outline: none;
+}

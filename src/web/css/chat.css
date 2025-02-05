@@ -1,0 +1,109 @@
+#history {
+    width: calc(100vw - 250px - 110px);
+    height: calc(100vh - 140px - 70px);
+    border-radius: 15px 15px;
+    background-color: #300071;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+}
+  
+.assistant {
+    margin: 0;
+    margin-top: 7px;
+    padding: 7px;
+    color: white;
+    border-radius: 2px 20px 20px;
+    display: flex;
+    width: fit-content;
+    background-color: #8466ff;
+    align-self: start;
+    max-width: 80%;
+    cursor: pointer;
+}
+  
+.user {
+    margin: 0;
+    margin-top: 7px;
+    padding: 7px 15px;
+    border-radius: 20px 2px;
+    color: white;
+    display: flex;
+    background-color: #5c36fb;
+    max-width: 80%;
+    width: fit-content;
+    align-self: end;
+    cursor: pointer;
+}
+  
+#message_container {
+    width: calc(100vw - 250px - 55px);
+    height: 95px;
+    border-radius: 15px 15px;
+    background-color: #300071;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    
+}
+  
+.disabled{
+    pointer-events: none;
+    opacity: 0.6;
+}
+  
+#message_container > img {
+    position: absolute;
+    right: 7px;
+    bottom: 4px;
+    cursor: pointer;
+}
+  
+#message {
+    height: 65px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    padding: 15px;
+    overflow: auto;
+    outline: none;
+} 
+  
+#message::before{
+    content: "Escribe aqui...";
+    color: #ffffff;
+    visibility: visible;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+  
+#message:empty::before{
+    visibility: visible;
+}
+
+  
+#message:not(:empty)::before{
+    visibility: hidden;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#chat > .title {
+    margin: 10px;
+}
+

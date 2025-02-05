@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>ChatAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/?requestfile=web/css/index.css" rel="stylesheet"/>
+    <link href="/?requestfile=web/css/chat.css" rel="stylesheet"/>
+    <link href="/?requestfile=web/css/login.css" rel="stylesheet"/>
+    <link href="/?requestfile=web/css/tools.css" rel="stylesheet"/>
+    <link href="/?requestfile=web/css/popup.css" rel="stylesheet"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.15.1/beautify.min.js"></script>
+
+</head>
+<body>
+    <div id="main">
+        <div id="tools">
+            <div class="content" style="padding-top: 10px;">
+                <span class="title" >Tools</span>
+                
+            </div>
+            <hr>
+            <div id="tools_function_list" class="content tool-font">
+                <p>Role: <span id="tools_role"></span></p>
+                <p>Content: </p>
+                <span id="tools_content" class="short-font tools_message_box selectable"></span>
+                <br>
+                <p>Functions: </p>
+                <ul id="tools_function_ul" class="short-font">
+                </ul>
+            </div>
+            <div id="button-container">
+                <button onclick="showJSONContainer()">Generar json</button>
+                <button onclick="requestOldChat()">Sincronizar</button>
+                <button>Guardar</button>
+            </div>
+        </div>
+        <div id="chat">
+            <span class="title">Chat</span>
+            <div id="history"></div>
+            <div id="message_container">
+                <div contenteditable="true" id="message"></div>
+                <img id="send_img" src="/?requestfile=web/svg/send.svg" width="30px">
+            </div>
+        </div>
+    </div>
+    <div id="login_container" class="overlayContainer">
+        <div id="login_box">
+            <p>Usuario:</p>
+            <input type="text" autocomplete="username" placeholder="Ingrese su nombre">
+            <p>Constrasena:</p>
+            <input type="text" autocomplete="current-password" placeholder="Ingrese contrasena">
+            <input id="login_button" type="button" value="Aceptar">
+        </div>
+    </div>
+    <script src="/?requestfile=web/js/index.js"></script>
+    <script src="/?requestfile=web/js/chat.js"></script>
+    <script src="/?requestfile=web/js/tools.js"></script>
+</body>
+</html>
